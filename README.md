@@ -25,7 +25,9 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 ## Using JSX in Vue(NUXT)
 
 ### v-html
-> v-html="this.msg" => domPropsInnerHTML={ this.msg }
+```js
+v-html="this.msg" => domPropsInnerHTML={ this.msg }
+```
 
 ### custm event
 ```js
