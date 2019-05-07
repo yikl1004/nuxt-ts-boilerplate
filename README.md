@@ -31,6 +31,6 @@ v-html="this.msg" => domPropsInnerHTML={ this.msg }
 
 ### custm event
 ```js
-this.$emit('myEvent') => \<div onMyEvent={this.method} /\>  
-this.$emit('myEvent', 'param') => \<div onMyEvent={(param) => this.method(param)} /\>
+this.$emit('myEvent') => <div onMyEvent={this.method} />  
+this.$emit('myEvent', 'param') => <div onMyEvent={(param) => this.method(param)} />
 ```
