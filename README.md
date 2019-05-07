@@ -34,3 +34,14 @@ v-html="this.msg" => domPropsInnerHTML={ this.msg }
 this.$emit('myEvent') => <div onMyEvent={this.method} />  
 this.$emit('myEvent', 'param') => <div onMyEvent={(param) => this.method(param)} />
 ```
+
+### refs
+```js
+// single
+<div ref="myDiv"/>
+
+// multiple
+this.list.map((item: IItem) => (
+  <div refInFor ref="myDiv" />
+))
+```
