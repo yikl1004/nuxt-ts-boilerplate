@@ -1,0 +1,8 @@
+.DS_Store
+.nuxt
+.idea
+node_modules
+dist
+projects/
+yarn.lock
+yarn-error.log

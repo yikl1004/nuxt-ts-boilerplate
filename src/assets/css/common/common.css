@@ -1,0 +1,30 @@
+.inline { display: inline-block; vertical-align: top; }
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
+body,h1,h2,h3,h4,input,button,textarea{font-family:'Noto Sans KR','돋움',Dotum,'Apple SD Gothic Neo',Sans-serif;font-size:16px;color:#000;}
+body{text-align:left;word-break:break-word;}
+img,fieldset,iframe{border:0 none}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+a{text-decoration:none}
+a:hover{text-decoration:none}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+caption{font-size:0;line-height:0;height:0}
+
+
+/* common */
+*{box-sizing:border-box;}
+
+table th label{cursor:inherit;}
+
+.clear{*zoom:1;}
+.clear:after{display:block;content:'';clear:both;}
+
+.blind{position:absolute;top:0;left:0;width:1px;height:1px;line-height:0;font-size:0;overflow:hidden;}
+caption.blind{position:inherit;margin:-1px 0 0;}
