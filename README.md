@@ -28,6 +28,7 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 > v-html="this.msg" => domPropsInnerHTML={ this.msg }
 
 ### custm event
-> this.$emit('myEvent') => \<div onMyEvent={this.method} /\>  
-> this.$emit('myEvent', 'param') => \<div onMyEvent={(param) => this.method(param)} /\>
-
+```js
+this.$emit('myEvent') => \<div onMyEvent={this.method} /\>  
+this.$emit('myEvent', 'param') => \<div onMyEvent={(param) => this.method(param)} /\>
+```
