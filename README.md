@@ -36,12 +36,14 @@ this.$emit('myEvent', 'param') => <div onMyEvent={(param) => this.method(param)}
 ```
 
 ### refs
-```js
+```tsx
 // single
 <div ref="myDiv"/>
+// => this.$refs.myDiv : HTMLElement | VueComponent
 
 // multiple
 this.list.map((item: IItem) => (
   <div refInFor ref="myDiv" />
 ))
+// => this.$refs.mydiv: Array<HTMLElement | VueComponent>
 ```
