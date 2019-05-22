@@ -1,14 +1,20 @@
 import { Component, Vue } from "nuxt-property-decorator"
 import { CreateElement, VNode } from 'vue'
+import Carousel from '@/components/common/carousel';
 
 
 @Component({
-    components: {}
+    components: { Carousel }
 })
 export default class Index extends Vue {
     render(h: CreateElement): VNode {
         return (
-            <h1>Hello, WORLD!!</h1>
+            <div class="wrap">
+                <h1>Hello, WORLD!!</h1>
+                <p>This is Caoursel</p>
+
+                <Carousel/>
+            </div>
         )
     }
 }

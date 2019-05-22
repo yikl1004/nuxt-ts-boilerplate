@@ -1,3 +1,8 @@
+html, body, #__nuxt, #__layout {min-height: 100%;}
+html, body { height: auto; }
+.wrap { min-height: 960px; display: flex; flex-direction: column; }
+
+
 .inline { display: inline-block; vertical-align: top; }
 
 /* reset */
@@ -28,3 +33,17 @@ table th label{cursor:inherit;}
 
 .blind{position:absolute;top:0;left:0;width:1px;height:1px;line-height:0;font-size:0;overflow:hidden;}
 caption.blind{position:inherit;margin:-1px 0 0;}
+
+
+.container2 {
+    width: 960px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+hr {
+    display: block;
+    border-top: 2px solid #f5f5f5;
+    margin: 50px 0;
+}
+
