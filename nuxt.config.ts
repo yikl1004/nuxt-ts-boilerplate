@@ -23,11 +23,17 @@ module.exports = {
         ],
         link: [
             // { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic' }
         ],
     },
 
     css: [
         '~/assets/css/common/common.css',
+        './node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css',
+        './node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css',
+        './node_modules/admin-lte/bower_components/Ionicons/css/ionicons.min.css',
+        './node_modules/admin-lte/dist/css/AdminLTE.min.css',
+        './node_modules/admin-lte/dist/css/skins/skin-blue.min.css'
     ],
     
     /*
@@ -83,8 +89,13 @@ module.exports = {
                 "syntax-jsx",
                 "@babel/plugin-syntax-dynamic-import",
                 "@babel/plugin-transform-runtime"
-            ].concat(isProduction ? [ "transform-remove-console" ] : [] )
+            ].concat(isProduction ? [ "transform-remove-console" ] : [] ),
         },
+        vendor: [
+            './node_modules/admin-lte/bower_components/jquery/dist/jquery.min.js',
+            './node_modules/admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js',
+            './node_modules/admin-lte/dist/js/adminlte.min.js'
+        ],
         extractCSS: isProduction,
         plugins: [
             new webpack.ProvidePlugin({
@@ -93,7 +104,12 @@ module.exports = {
                 'window.jQuery': 'jquery',
                 jQuery: 'jquery'
             })
-        ]
+        ],
+        resolve: {
+            alias: {
+                'va': 'vue2-admin-lte/src'
+            }
+        }
     },
     modules: [
         // "@nuxtjs/axios",

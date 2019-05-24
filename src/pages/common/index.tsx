@@ -7,6 +7,7 @@ import CheckBox from '@/components/common/form/CheckBox'
 import CheckBoxGroup from '@/components/common/form/CheckBoxGroup'
 import SelectBox from '@/components/common/form/selectBox'
 import RadioGroup from '@/components/common/form/radioGroup'
+import TextGround from '@/components/common/form/textGround'
 
 
 const Result = styled.p`
@@ -52,53 +53,71 @@ export default class Testbed extends Vue {
 
     render(h: CreateElement): VNode {
         return (
-            <div>
-                <Title>input[type=text]</Title>
-                <TextField
-                    id="myId"
-                    label="sample"
-                    v-model={ this.inputText }
-                />
-                <Result>inputText: { `'${this.inputText}'` }</Result>
-                <hr/>
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <h1>
+                        Common
+                        <small>공통 컴포넌트 (form)</small>
+                    </h1>
+                </section>
+                <section class="content container-fluid">
+                    {/* contents.... */}
+                    <Title>input[type=text]</Title>
+                    <TextField
+                        id="myId"
+                        label="sample"
+                        v-model={ this.inputText }
+                    />
+                    <Result>inputText: { `'${this.inputText}'` }</Result>
+                    <hr/>
 
-                <Title>CheckBox single</Title>
-                <CheckBox
-                    id="myCheckbox"
-                    label="sampleCheckbox"
-                    v-model={ this.inputChecked }
-                />
-                <Result>inputChecked: { `${this.inputChecked}` }</Result>
-                <hr/>
+                    <Title>CheckBox single</Title>
+                    <CheckBox
+                        id="myCheckbox"
+                        label="sampleCheckbox"
+                        v-model={ this.inputChecked }
+                    />
+                    <Result>inputChecked: { `${this.inputChecked}` }</Result>
+                    <hr/>
 
-                <Title>CheckBox multiple</Title>
-                <CheckBoxGroup
-                    id="group"
-                    label="mygroup"
-                    list={ this.checkList }
-                    v-model={ this.checkedList }
-                />
-                <Result>checkedList: { `[${this.checkedList}]` }</Result>
-                <hr/>
+                    <Title>CheckBox multiple</Title>
+                    <CheckBoxGroup
+                        id="group"
+                        label="mygroup"
+                        list={ this.checkList }
+                        v-model={ this.checkedList }
+                    />
+                    <Result>checkedList: { `[${this.checkedList}]` }</Result>
+                    <hr/>
 
-                <Title>SelectBox</Title>
-                <SelectBox
-                    id="myselect"
-                    label="과일"
-                    optionTitle="선택해 주세요"
-                    list={ this.selectList }
-                    v-model={ this.selectedItem }
-                />
-                <Result>selectedItem: {`'${this.selectedItem}`}</Result>
-                <hr/>
+                    <Title>SelectBox</Title>
+                    <SelectBox
+                        id="myselect"
+                        label="과일"
+                        optionTitle="선택해 주세요"
+                        list={ this.selectList }
+                        v-model={ this.selectedItem }
+                    />
+                    <Result>selectedItem: {`'${this.selectedItem}`}</Result>
+                    <hr/>
 
-                <Title>Radio group</Title>
-                <RadioGroup
-                    id="myradio"
-                    list={ this.radioList }
-                    v-model={ this.selectedRadio }
-                />
-                <Result>selectedRadio: {`'${this.selectedRadio}'`}</Result>
+                    <Title>Radio group</Title>
+                    <RadioGroup
+                        id="myradio"
+                        list={ this.radioList }
+                        v-model={ this.selectedRadio }
+                    />
+                    <Result>selectedRadio: {`'${this.selectedRadio}'`}</Result>
+
+                    <Title>TextArea</Title>
+                    <TextGround
+                        id="myTextarea"
+                        label="내용"
+                        placeholder="내용을 입력해주세요."
+                        maxLength={50}
+                    />
+                    {/* <Result></Result> */}
+                </section>
             </div>
         )
     }

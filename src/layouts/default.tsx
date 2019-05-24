@@ -6,29 +6,33 @@ import styled from 'vue-styled-components'
 // components
 import Header from '@/components/common/header'
 import Lnb from '@/components/common/lnb'
+import Footer from '@/components/common/footer'
 
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+const Layout = styled.div`
+    height: auto;
+    min-height: 100%;
 `
 
 
 @Component({
-    components: { }
+    components: { Header, Lnb, Footer }
 })
 export default class DefaultLayout extends Vue {
 
     render(h: CreateElement): VNode {
         return (
-            <div class="wrap">
-                <Header/>
-                <Container class="container" id="container">
+            <Layout class="hold-transition skin-blue sidebar-mini">
+                <div class="wrapper">
+                    <Header/>
                     <Lnb/>
                     <nuxt/>
-                </Container>
-            </div>
+                    <Footer/>
+                    {/* <Container class="container" id="container">
+                        <nuxt/>
+                    </Container> */}
+                </div>
+            </Layout>
         )
     }
 }
