@@ -6,7 +6,7 @@ const session = require('express-session')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-    mode: 'universal',
+    // mode: 'spa',
     srcDir: 'src/',
     env: {
         NODE_ENV: process.env.NODE_ENV,
@@ -114,8 +114,9 @@ module.exports = {
     modules: [
         // "@nuxtjs/axios",
         // "@nuxtjs/auth",
+        '@nuxtjs/pwa',
         'cookie-universal-nuxt',
-        "@nuxtjs/style-resources",
+        '@nuxtjs/style-resources',
     ],
     // auth: {
     //     redirect: {
@@ -134,5 +135,26 @@ module.exports = {
     //     credentials: true,
     // },
     styleResources: {
-    }
+    },
+
+    // application manifest
+    // manifest: {
+    //     name: 'nuxt_pwa',
+    //     short_name: 'NuxtPwa',
+    //     short_url: '/?utm_source=homescreen',
+    //     display: 'standalone',
+    //     bacground_color: '#000'
+    // },
+
+    // Service worker
+    // workbox: {
+    //     offline: false,
+    //     runtimeCaching: [
+    //         {
+    //             urlPattern: '/*',
+    //             handler: 'networkFirst',
+    //             method: 'GET'
+    //         }
+    //     ]
+    // }
 }

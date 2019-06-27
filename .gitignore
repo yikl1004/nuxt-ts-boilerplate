@@ -7,3 +7,4 @@ projects/
 yarn.lock
 yarn-error.log
 mock/rest/*/*/*/mock/response.txt
+package-lock.json
