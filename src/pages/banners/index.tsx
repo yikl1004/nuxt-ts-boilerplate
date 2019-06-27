@@ -3,6 +3,7 @@ import { CreateElement, VNode } from 'vue';
 import styled from 'vue-styled-components'
 
 import SearchArea from '@/components/banners/searchArea'
+import Carousel from '@/components/common/carousel'
 
 
 const Contents = styled.div`
@@ -37,7 +38,7 @@ export default class BannersPage extends Vue {
                     </ol>
                 </section>
                 <section class="content container-fluid">
-                    {/* contents.... */}
+                    <Carousel/>
                 </section>
             </div>
         )

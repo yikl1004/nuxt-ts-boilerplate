@@ -3,11 +3,13 @@ import { CreateElement, VNode } from 'vue';
 import styled from 'vue-styled-components'
 
 
-const Result = styled.p`
-    margin-top: 20px;
+const TextFieldStyled = styled.div`
+    label {
+        display: inline-block;
+        margin-right: 10px;
+    }
 `
 
-const Mypage = namespace('mypage')
 
 @Component({
     components: {}
@@ -24,13 +26,11 @@ export default class TextField extends Vue {
     private text: string = ''
 
 
-    @Watch('text')
-    changeText() {
+    @Watch('text') changeText() {
         this.input(this.text)
     }
 
-    @Emit('input')
-    input(text) {
+    @Emit('input') input(text) {
         return text
     }
 
@@ -40,10 +40,10 @@ export default class TextField extends Vue {
         const { id, label } = this
 
         return (
-            <div class="textfield">
+            <TextFieldStyled class="textfield">
                 <label for={ id }>{ label }</label>
                 <input type="text" id={ id } v-model={ this.text }/>
-            </div>
+            </TextFieldStyled>
         )
     }
 

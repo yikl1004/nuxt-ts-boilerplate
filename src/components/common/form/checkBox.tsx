@@ -16,9 +16,7 @@ export default class CheckBox extends Vue {
 
     private checked: boolean = false
 
-
-    @Watch('checked')
-    changeText() {
+    @Watch('checked') changeText() {
         this.$emit('input', this.checked)
     }
 
